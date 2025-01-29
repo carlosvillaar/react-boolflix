@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContex";
 import { imageBasePath } from "../data/api";
 
@@ -46,7 +46,7 @@ const TvCard = () => {
     ))
   ) : (
     <h2 className="title text-light">
-      Non sono presenti contenuti con questo nome
+      Non sono presenti Serie TV con questo nome
     </h2>
   );
 };

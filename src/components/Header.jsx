@@ -2,7 +2,7 @@ import SearchBar from "./CustomSearch";
 
 const Header = () => {
   return (
-    <header className="my-4 mb-5 d-flex justify-content-between px-5">
+    <header className="container-fluid my-4 mb-5 d-flex justify-content-between px-5">
       <a href="#">
         <img src="/logo/Logonetflix.png" alt="logo" className="logo" />
       </a>

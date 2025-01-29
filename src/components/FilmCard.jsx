@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContex";
 import { imageBasePath } from "../data/api";
 
@@ -12,7 +12,7 @@ const FilmCard = () => {
       <>
         <div
           key={film.id}
-          className="film-img my-3 mx-4 text-center w-25 position-relative"
+          className="film-img my-3 mx-4 text-center position-relative"
           style={{ overflow: "hidden" }}
         >
           <img
@@ -46,9 +46,7 @@ const FilmCard = () => {
       </>
     ))
   ) : (
-    <h2 className="title text-light">
-      Non sono presenti contenuti con questo nome
-    </h2>
+    <h2 className="title">Non sono presenti Film con questo nome</h2>
   );
 };
 

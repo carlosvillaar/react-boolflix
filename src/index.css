@@ -19,7 +19,12 @@ header nav ul li a:hover {
 }
 
 .title {
-  margin-top: 270px;
+  margin: 50px;
+  color: white;
+}
+
+.film-img {
+  width: 400px;
 }
 
 .film-img .hover {
@@ -27,7 +32,7 @@ header nav ul li a:hover {
   transition: 0.2s ease-in;
   background-color: black;
   color: white;
-  min-height: 700px;
+  min-height: 820px;
 }
 .film-img:hover .hover {
   opacity: 0.9;
