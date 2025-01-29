@@ -5,13 +5,18 @@ const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
   const [search, setSearch] = useState("");
+
   const [films, setFilms] = useState([]);
+
   const replaceSearchParam = () => {
-    console.log("HANDPOINT", base_api_popular_url);
     if (search.length) {
-      axios.get(base_api_search_url + `&query=${search}`).then((res) => {});
+      axios.get(base_api_search_url + `&query=${search}`).then((res) => {
+        setFilms(res.data.results);
+      });
     } else {
-      axios.get(base_api_popular_url).then((res) => {});
+      axios.get(base_api_popular_url).then((res) => {
+        setFilms(res.data.results);
+      });
     }
   };
 
@@ -23,7 +28,9 @@ const GlobalProvider = ({ children }) => {
     search,
     setSearch,
     replaceSearchParam,
+    films,
   };
+
   return (
     <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
   );

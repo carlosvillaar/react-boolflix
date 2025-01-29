@@ -1,20 +1,7 @@
-import { useContext } from "react";
-import { GlobalContext } from "../context/GlobalContex";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
-  const { search, setSearch, replaceSearchParam } = useContext(GlobalContext);
-
-  return (
-    <header>
-      <input
-        type="text"
-        id="search"
-        value={search}
-        onChange={(event) => setSearch(event.target.value)}
-      />
-      <button onClick={replaceSearchParam}>Cerca</button>
-    </header>
-  );
+  return <SearchBar />;
 };
 
 export default Header;
