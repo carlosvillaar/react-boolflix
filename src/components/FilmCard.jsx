@@ -12,7 +12,7 @@ const FilmCard = () => {
       <>
         <div
           key={film.id}
-          className="my-3 mx-4 text-center w-25 position-relative"
+          className="film-img my-3 mx-4 text-center w-25 position-relative"
           style={{ overflow: "hidden" }}
         >
           <img
@@ -24,14 +24,14 @@ const FilmCard = () => {
               height: "100%",
             }}
           />
-          <div className="py-5 px-2 position-absolute top-0 start-0 text-start text-bg-dark w-100">
+          <div className="hover py-5 px-2 position-absolute top-0 start-0 text-start w-100">
             <p>Titolo: {film.title}</p>
             <p>Titolo originale: {film.original_title}</p>
             {langs.includes(film.original_language) ? (
               <img
                 src={`/img/flags/${film.original_language}.svg`}
                 alt={film.original_language}
-                className="w-25 rounded-pill"
+                className="w-25 rounded-pill mb-3"
               />
             ) : (
               <p>Lingua: {film.original_language}</p>
@@ -46,7 +46,9 @@ const FilmCard = () => {
       </>
     ))
   ) : (
-    <h1>non sono presenti film</h1>
+    <h2 className="title text-light">
+      Non sono presenti contenuti con questo nome
+    </h2>
   );
 };
 
